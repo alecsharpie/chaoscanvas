@@ -237,13 +237,25 @@ function draw() {
         ctx.restore();
     });
 
-    // Draw mouse cursor effect with velocity influence
+    // Draw a subtle quantum cursor effect
     const mouseSpeed = Math.sqrt(mouse.velocity.x**2 + mouse.velocity.y**2);
-    const cursorSize = 8 + mouseSpeed * 2;
+    
+    // Inner glow
     ctx.beginPath();
-    ctx.arc(mouse.x, mouse.y, cursorSize, 0, Math.PI*2);
-    ctx.fillStyle = `hsla(${(mouseSpeed * 20) % 360}, 100%, 70%, 0.6)`;
+    ctx.arc(mouse.x, mouse.y, 4, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255, 255, 255, 0.5)`;
     ctx.fill();
+    
+    // Orbital rings
+    const numRings = 2;
+    for (let i = 0; i < numRings; i++) {
+        ctx.beginPath();
+        const radius = 8 + i * 6;
+        ctx.arc(mouse.x, mouse.y, radius, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(255, 255, 255, ${0.2 - i * 0.1})`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+    }
 
     requestAnimationFrame(draw);
 }
