@@ -1,10 +1,9 @@
 body { 
-    margin: 0; 
-  }
-  
-  #ChaosCanvas {
-     background-color: #121212; /* Dark background */
-     display: block;
-     width: 100%;
-     height: 100%; /* Responsive height */
-  }
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+canvas {
+    cursor: none;
+}

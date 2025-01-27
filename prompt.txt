@@ -1,0 +1,13 @@
+Hey R1!
+
+Can you please help me add some conceptual chaos to the world? I want to invoke a mind bending optical illusion of a webpage (with a HTML & JS canvas).
+
+Here is my current code:
+script.js
+```
+...
+```
+
+Can you please help me brainstorm, plan out, and then execute on an upgrade to this code? I want to make it more chaotic, bringing forth a feeling of real randomness while invoking awe! I really am hoping to also keep is satisfying, so not to flashy etc.
+
+Thank you so much R1!
